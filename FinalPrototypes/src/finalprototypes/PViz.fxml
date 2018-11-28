@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Open…" />
+            <Menu mnemonicParsing="false" text="Open Recent" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem mnemonicParsing="false" text="Export As…" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <SplitPane dividerPositions="0.18, 0.5" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <items>
+        <AnchorPane SplitPane.resizableWithParent="false">
+          <children>
+            <Label alignment="CENTER" layoutX="12.0" layoutY="9.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Display Options" textAlignment="CENTER" wrapText="false">
+              <font>
+                <Font size="18.0" fx:id="x1" />
+              </font>
+              <textFill>
+                <Color blue="0.624" green="0.624" red="0.624" fx:id="x2" />
+              </textFill>
+            </Label>
+                  <ToggleButton layoutX="45.0" layoutY="318.0" mnemonicParsing="false" text="Display Graph" />
+                  <Group layoutX="16.0" layoutY="212.0">
+                     <children>
+                        <RadioButton mnemonicParsing="false" text="Topic View" />
+                        <RadioButton layoutY="18.0" mnemonicParsing="false" text="Software-Centric View" />
+                        <RadioButton layoutY="37.0" mnemonicParsing="false" text="Data-Centric View" />
+                        <RadioButton layoutY="56.0" mnemonicParsing="false" text="Chronological View" />
+                        <RadioButton layoutY="76.0" mnemonicParsing="false" text="Multi-Dimensional View" />
+                     </children>
+                  </Group>
+                  <Group layoutX="12.0" layoutY="148.0">
+                     <children>
+                        <Slider id="Node Spacing" blockIncrement="1.0" layoutX="3.0" layoutY="17.94921875" majorTickUnit="20.0" min="1.0" minorTickCount="5" prefHeight="38.0" prefWidth="198.0" showTickLabels="true" showTickMarks="true" />
+                        <Text layoutX="2.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Node Spacing" />
+                     </children>
+                  </Group>
+                  <Group layoutX="14.0" layoutY="43.0">
+                     <children>
+                        <CheckBox layoutY="61.0" mnemonicParsing="false" text="Legend" />
+                        <CheckBox layoutY="41.0" mnemonicParsing="false" text="All Relationships" />
+                        <CheckBox layoutY="21.0" mnemonicParsing="false" text="All Vertex IDs" />
+                        <CheckBox mnemonicParsing="false" text="Stop Vetrices" />
+                     </children>
+                  </Group>
+          </children>
+        </AnchorPane>
+        <ScrollPane prefHeight="749.0" prefWidth="513.0">
+          <content>
+            <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="545.0" prefWidth="430.0">
+              <children>
+                <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="View" textAlignment="CENTER" textFill="$x2" wrapText="false" />
+              </children>
+            </AnchorPane>
+          </content>
+        </ScrollPane>
+            <ScrollPane maxWidth="-Infinity" prefWidth="300.0">
+               <content>
+                  <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="545.0" prefWidth="430.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" style="&#10;" text="File Viewer" textAlignment="CENTER" wrapText="false">
+                           <font>
+                              <Font size="18.0" fx:id="x11" />
+                           </font>
+                           <textFill>
+                              <Color blue="0.624" green="0.624" red="0.624" fx:id="x21" />
+                           </textFill>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+      </items>
+    </SplitPane>
+    <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
+      <children>
+        <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="File Ready/NotReady" HBox.hgrow="ALWAYS">
+          <font>
+            <Font size="11.0" fx:id="x3" />
+          </font>
+          <textFill>
+            <Color blue="0.625" green="0.625" red="0.625" fx:id="x4" />
+          </textFill>
+        </Label>
+        <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <ProgressBar layoutX="121.0" layoutY="-1.0" prefHeight="18.0" prefWidth="862.0" progress="0.0" />
+               </children></Pane>
+        <Label font="$x3" maxWidth="-1.0" text="Filename.xml,.ttl," textFill="$x4" HBox.hgrow="NEVER" />
+      </children>
+      <padding>
+        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+      </padding>
+    </HBox>
+  </children>
+</VBox>
